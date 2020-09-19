@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charest="utf-8" />
+        <title>Hello world!</title>
+    </head>
+    <body>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+            }
+            </style>
+        <h1 style="text-align: center;">RAHUL MEN'S WEAR</h1>
+        <p style="text-align: center;"><b>Phone.NO:-{{#each users}}{{this.billNo}}{{/each}}</b></p>
+        <p style="text-align: center;"><b>Phone.NO:-022 2520 5428 </b></p>
+        <p style="text-align: center;"><b>Name:-{{#each users}}{{this.name}}{{/each}}
+        Email:-{{#each users}}{{this.email}}{{/each}}
+        Phone:-{{#each users}}{{this.phone}}{{/each}}</b></p>
+        <table style="margin-left:auto;margin-right:auto;">
+            <tr>
+                <th style="width: 10%; font-size: 24px;">Sr.NO</th>
+                <th style="width: 40%; font-size: 24px;">Product</th>
+                <th style="width: 30%; font-size: 24px;">Price</th>
+                <th style="width: 60%; font-size: 24px;">Quantity</th>
+                <th style="width: 30%; font-size: 24px;">Total</th>
+            </tr> 
+            {{#each users}}
+        <tr>
+            <td style="width: 10%; font-size: 24px;">{{this.no}}</td>
+            <td style="width: 40%; font-size: 24px;">{{this.product}}</td>
+            <td style="width: 40%; font-size: 24px;">{{this.price}}</td>
+            <td style="width: 10000%; font-size: 24px;">{{this.quantity}}</td>
+            <td style="width: 10000%; font-size: 24px;">{{this.total}}</td>
+        </tr>{{/each}}
+        
+        <tr> 
+            <td style="width: 10%; font-size: 24px;"></td>
+            <td style="width: 40%; font-size: 24px;"></td>
+            <td style="width: 10000%; font-size: 24px;"></td>
+            <td style="width: 60%; font-size: 24px; text-align: right;"><b>TOTAL</b></td>
+            
+            <td style="width: 10000%; font-size: 24px;">{{#each users}}{{anvalTotal}}{{/each}}</td>
+            
+        </tr>
+    </table>
+    </body>
+</html>

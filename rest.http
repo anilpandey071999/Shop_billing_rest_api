@@ -1,0 +1,19 @@
+POST http://localhost:300/Login?email=Rahul@gm.co&password=Shadowwalker 
+###
+POST http://localhost:300
+Content-Type: application/json
+
+{
+    "userName":"Rahul@gm.co",
+    "userPassword":"Shadowwalker"
+}
+
+###
+GET http://localhost:300/pdfs/1120  `
+
+
+###
+POST http://localhost:300/pdf
+Content-Type: application/json
+
+{"billNo":11,"name": "ww", "email": "wpppw","phone":908876555666, "Product": ["www", "ww"], "Price": [55, 88],"Quantity":[2,3]}
