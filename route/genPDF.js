@@ -29,21 +29,21 @@ router.post('/',(req,res,next)=>{
   var Totals = 0;
   var anvalTotal = 0;
 
-  var con = mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password:"",
-    database:"nodedb"
-  })
+  let con = mysql.createConnection({
+    host:"sql12.freemysqlhosting.net",
+    user:"sql12367523",
+    password:"N5cvVKG37x",
+    database:"sql12367523"
+});
   
-  con.connect(function(err){
-    if(err) throw err;
-      console.log("successfully Connect");
-      con.query("CREATE database IF NOT EXISTS NODEDB",function(err,result){
-      if(err) throw err;
-      console.log("Database created");
-    })
-  })
+  // con.connect(function(err){
+  //   if(err) throw err;
+  //     console.log("successfully Connect");
+  //     con.query("CREATE database IF NOT EXISTS NODEDB",function(err,result){
+  //     if(err) throw err;
+  //     console.log("Database created");
+  //   })
+  // })
 
   
   var sql = "Insert into `billdata`( `name`, `email`, `phone`, `time`, `billno`) values ('"+name+"','"+email+"','"+phone+"',"+null+",'"+billNo+"')";
@@ -150,7 +150,7 @@ PDFDocument.create(document, options)
         next(error);
     });
     // res.send(users);
-    res.send({status:200,message:'PDF Created Successfully'})
+    res.send({status:200,message: "PDF Created"})
     // res.redirect('output.pdf');
 });
 

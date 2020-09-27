@@ -85,7 +85,18 @@ app.post('/',async(req,res,next)=>{
         }
 })
 
-
+let contion = mysql.createConnection({
+    host:"sql12.freemysqlhosting.net",
+    user:"sql12367523",
+    password:"N5cvVKG37x",
+    database:"sql12367523"
+});
+app.get("/dbcon",(req,res)=>{
+    contion.connect(function(err){
+        if(err) throw console.log("connection is fucked up");
+        res.send("connection is sucessfull");
+    })
+})
 
 
 app.use((req,res,next)=>{

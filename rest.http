@@ -9,11 +9,21 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:300/pdfs/1120  `
+GET http://localhost:300/pdfs/11  `
 
+###
+GET https://rahulmenswear-billingsystem.azurewebsites.net/pdfs/11
+
+###
+POST https://rahulmenswear-billingsystem.azurewebsites.net/pdf
+Content-Type: application/json
+
+{"billNo":11,"name": "ww", "email": "wpppw","phone":908876555666, "Product": ["product1", "ww"], "Price": [55, 88],"Quantity":[2,3]}
 
 ###
 POST http://localhost:300/pdf
 Content-Type: application/json
 
 {"billNo":11,"name": "ww", "email": "wpppw","phone":908876555666, "Product": ["www", "ww"], "Price": [55, 88],"Quantity":[2,3]}
+###
+GET https://rahulmenswear-billingsystem.azurewebsites.net/dbcon
