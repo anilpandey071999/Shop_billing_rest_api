@@ -57,8 +57,10 @@ file.pipe(res);
 })
 app.get('/',(req,res)=>{
     // res.writeHead(200);
-    if (req.url === '/') req.url = '/index.html'; // courtesy of @JosephCho
-    res.end(fs.readFileSync(__dirname + req.url));
+    // if (req.url === '/') {
+    //     req.url = '/index.html'; // courtesy of @JosephCho
+    // }
+    // res.end(fs.readFileSync(__dirname + req.url));
 })
 // const userCredential = require('../modules/user');
 app.post('/',async(req,res,next)=>{
@@ -85,18 +87,18 @@ app.post('/',async(req,res,next)=>{
         }
 })
 
-let contion = mysql.createConnection({
-    host:"sql12.freemysqlhosting.net",
-    user:"sql12367523",
-    password:"N5cvVKG37x",
-    database:"sql12367523"
-});
-app.get("/dbcon",(req,res)=>{
-    contion.connect(function(err){
-        if(err) throw console.log("connection is fucked up");
-        res.send("connection is sucessfull");
-    })
-})
+// let contion = mysql.createConnection({
+//     host:"sql12.freemysqlhosting.net",
+//     user:"sql12367523",
+//     password:"N5cvVKG37x",
+//     database:"sql12367523"
+// });
+// app.get("/dbcon",(req,res)=>{
+//     contion.connect(function(err){
+//         if(err) throw console.log("connection is fucked up");
+//         res.send("connection is sucessfull");
+//     })
+// })
 
 
 app.use((req,res,next)=>{
@@ -115,7 +117,7 @@ app.use((err,req,res,next)=>{
 
 app.use(morgan('dev'));
 
-app.listen(300,()=>{
+app.listen(process.env.PORT,()=>{
     console.log('Server is Listen on port 300')
 })
 
