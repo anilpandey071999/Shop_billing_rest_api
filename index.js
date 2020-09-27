@@ -56,7 +56,11 @@ file.pipe(res);
     
 })
 app.get('/',(req,res)=>{
-    res.send("hello");
+     // res.writeHead(200);
+    // if (req.url === '/') {
+    //     req.url = '/index.html'; // courtesy of @JosephCho
+    // }
+    // res.end(fs.readFileSync(__dirname + req.url));
 })
 // const userCredential = require('../modules/user');
 app.post('/',async(req,res,next)=>{
