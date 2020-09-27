@@ -27,3 +27,12 @@ Content-Type: application/json
 {"billNo":11,"name": "ww", "email": "wpppw","phone":908876555666, "Product": ["www", "ww"], "Price": [55, 88],"Quantity":[2,3]}
 ###
 GET https://rahulmenswear-billingsystem.azurewebsites.net/dbcon
+
+###
+GET http://localhost:300
+###
+
+POST http://localhost:300/pdf
+Content-Type: application/json
+
+{"billNo":11,"name": "ww", "email": "wpppw","phone":908876555666, "Product": ["www", "ww"], "Price": [55, 88],"Quantity":[2,3]}
