@@ -7,7 +7,7 @@ const fs = require('fs');
 
 const userCredential = require('./modules/user');
 
-// mongoos.connect('mongodb+srv://ShadowWalker:Anil@07@cluster0-dgxg1.mongodb.net/SampleAPI',
+// mongoos.connect('mongodb+srv://*****:*****@cluster0-dgxg1.mongodb.net/SampleAPI',
 // {
 //     useNewUrlParser:true,
 //     useUnifiedTopology:true
@@ -56,11 +56,7 @@ file.pipe(res);
     
 })
 app.get('/',(req,res)=>{
-    // res.writeHead(200);
-    // if (req.url === '/') {
-    //     req.url = '/index.html'; // courtesy of @JosephCho
-    // }
-    // res.end(fs.readFileSync(__dirname + req.url));
+    res.send("hello");
 })
 // const userCredential = require('../modules/user');
 app.post('/',async(req,res,next)=>{
