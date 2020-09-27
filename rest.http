@@ -21,7 +21,7 @@ Content-Type: application/json
 {"billNo":11,"name": "ww", "email": "wpppw","phone":908876555666, "Product": ["product1", "ww"], "Price": [55, 88],"Quantity":[2,3]}
 
 ###
-POST http://localhost:300/pdf
+POST https://rahulmenswear-billing-system.herokuapp.com/pdf
 Content-Type: application/json
 
 {"billNo":11,"name": "ww", "email": "wpppw","phone":908876555666, "Product": ["www", "ww"], "Price": [55, 88],"Quantity":[2,3]}
