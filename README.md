@@ -1,6 +1,5 @@
 # Shop_billing_rest_api
- It is node rest api which is capable to make the e-bill on base of provided data is entered.
- this project support both mogodb and mysql both kind of database.
+ It is node rest API which is capable to make the e-bill on the base of provided data is entered. this project supports both MongoDB and MySQL both kinds of databases.
  
 ## Dependencies
 It is useing express as middle layer.
